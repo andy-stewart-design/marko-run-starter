@@ -1,0 +1,54 @@
+@import "~@ebay/skin/dist/variables/variables.less";
+
+:root {
+  // Typography
+  --font-sans: "Market Sans", "Arial", sans-serif;
+  --base-line-height: 1.7;
+  --color-neutral-0-rgb: 255, 255, 255;
+  --color-neutral-8-rgb: 0, 0, 0;
+
+  --opacity-core-50: calc(0.5 * var(--opacity-core-100));
+  --opacity-core-100: 8%;
+  --opacity-core-150: calc(1.5 * var(--opacity-core-100));
+  --opacity-core-200: calc(2 * var(--opacity-core-100));
+  --opacity-core-250: calc(2.5 * var(--opacity-core-100));
+  --opacity-core-300: calc(3 * var(--opacity-core-100));
+  --opacity-core-400: calc(4 * var(--opacity-core-100));
+
+  --state-hover-filter: brightness(90%);
+  --state-layer-focus: rgba(
+    var(--color-neutral-8-rgb),
+    var(--opacity-core-100)
+  );
+  --state-layer-hover: rgba(var(--color-neutral-8-rgb), var(--opacity-core-50));
+  --state-layer-pressed: rgba(
+    var(--color-neutral-8-rgb),
+    var(--opacity-core-150)
+  );
+  --state-layer-drag: rgba(var(--color-neutral-8-rgb), var(--opacity-core-200));
+
+  --shadow-subtle: rgba(0, 0, 0, 0.07) 0px 4px 12px 0px;
+  --shadow-strong: rgba(0, 0, 0, 0.2) 0px 5px 17px 0px,
+    rgba(0, 0, 0, 0.15) 0px 2px 7px 0px;
+
+  /* Motion Functions */
+  --motion-easing-standard: cubic-bezier(0.3, 0, 0, 1);
+  --motion-easing-quick-enter: cubic-bezier(0, 0, 0, 1);
+  --motion-easing-quick-exit: cubic-bezier(1, 0, 0, 1);
+  --motion-easing-soft-enter: cubic-bezier(0, 0, 0.7, 1);
+  --motion-easing-soft-exit: cubic-bezier(0.3, 0, 1, 1);
+  --motion-easing-continuous: cubic-bezier(0.3, 0, 0.7, 1);
+  --motion-easing-bounce: cubic-bezier(0.3, 0, 0, 1.5);
+  --motion-easing-linear: cubic-bezier(0, 0, 1, 1);
+  /* Motion Timings */
+  --motion-duration-instant: 17ms;
+  --motion-duration-short-1: 50ms;
+  --motion-duration-short-2: 83ms;
+  --motion-duration-short-3: 167ms;
+  --motion-duration-medium-1: 250ms;
+  --motion-duration-medium-2: 333ms;
+  --motion-duration-medium-3: 500ms;
+  --motion-duration-long-1: 667ms;
+  --motion-duration-long-2: 883ms;
+  --motion-duration-long-3: 1000ms;
+}

@@ -1,0 +1,108 @@
+@import "~@ebay/skin/dist/variables/variables.less";
+
+//----------------------------------------------
+// Set all to border-box
+//----------------------------------------------
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+//----------------------------------------------
+// reset margins and paddings
+//----------------------------------------------
+* {
+  margin: 0;
+  padding: 0;
+}
+
+//----------------------------------------------
+// Prevent Mobile Overflow
+//----------------------------------------------
+html {
+  font-family: var(--font-sans);
+  font-size: 100%;
+
+  @media (max-width: @_screen-size-MD) {
+    overflow-x: hidden;
+  }
+}
+
+//----------------------------------------------
+// Smooth our type
+//----------------------------------------------
+body {
+  margin: 0;
+  width: 100%;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  color: var(--color-foreground-primary);
+}
+
+//----------------------------------------------
+// eBay's Global Header package injects
+// all kinds of grossness to we have to override.
+// Setting a page specific class provides enough
+// specificity.
+//----------------------------------------------
+html body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+}
+
+//----------------------------------------------
+// RWD Images // ignoring global header class
+//----------------------------------------------
+img:not(#gh-la img) {
+  max-width: 100%;
+}
+
+//----------------------------------------------
+// reset margins and paddings
+//----------------------------------------------
+
+figure,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  border: 0;
+}
+
+//----------------------------------------------
+// links
+//----------------------------------------------
+a {
+  text-decoration: none;
+  color: var(--color-foreground-primary);
+}
+
+a:active,
+a:link {
+  color: var(--color-foreground-primary);
+}
+
+html a:visited {
+  color: inherit;
+}
+
+html a:hover {
+  text-decoration: none;
+}
+
+//----------------------------------------------
+// lists
+//----------------------------------------------
+ul {
+  list-style-type: none;
+}

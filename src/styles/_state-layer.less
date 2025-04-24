@@ -1,0 +1,79 @@
+//-------------------------------------------------------------
+// state-layer() Mixin for applying state layer to an element
+// in hover, focus, active, and disabled states.
+//
+// For elements with a container/background, this mixin applies
+// a semi-transparent background gradient layer over the existing
+// background-color. This is useful for buttons, cards, etc.
+//
+// For elements without a container/background, this mixin
+// adjusts the element's opacity. This is useful for text links.
+//
+// For disabled state, only controls cursor styling.
+// Elements should specify their own background & foreground
+// colors for disabled state.
+//
+// @param {boolean} $hasContainer, default: true
+//    Whether the element has a container/background.
+// @param {boolean} $onlyImages, default: false
+//    Whether to apply state layer only to nested images
+//    and not to the container element itself
+.state-layer(@hasContainer: true, @onlyImages: false) {
+  & when (@hasContainer = true) {
+    &:not(:disabled) {
+      &:hover {
+        & when (@onlyImages = false) {
+          background-image: linear-gradient(
+            var(--state-layer-hover),
+            var(--state-layer-hover)
+          );
+        }
+
+        // img {
+        //   filter: brightness(calc(100% - var(--opacity-core-150)));
+        // }
+      }
+
+      &:focus {
+        & when (@onlyImages = false) {
+          background-image: linear-gradient(
+            var(--state-layer-focus),
+            var(--state-layer-focus)
+          );
+        }
+
+        // img {
+        //   filter: brightness(calc(100% - var(--opacity-core-200)));
+        // }
+      }
+
+      &:active {
+        & when (@onlyImages = false) {
+          background-image: linear-gradient(
+            var(--state-layer-pressed),
+            var(--state-layer-pressed)
+          );
+        }
+
+        // img {
+        //   filter: brightness(calc(100% - var(--opacity-core-250)));
+        // }
+      }
+    }
+  }
+
+  & when (@hasContainer = false) {
+    transition: opacity 0.4s ease;
+
+    &:not(:disabled) {
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

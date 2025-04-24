@@ -1,0 +1,148 @@
+@import "~@ebay/skin/dist/variables/variables.less";
+
+.ginormous-1 {
+  font-family: var(--font-sans, "Market Sans");
+  color: var(--color-foreground-primary);
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -3.84px;
+}
+
+.display-1 {
+  font-family: var(--font-sans, "Market Sans");
+  color: var(--color-foreground-primary);
+  font-size: var(--font-size-giant-3, 46px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--font-size-giant-4, 56px);
+  letter-spacing: -0.92px;
+}
+
+.display-2 {
+  font-family: var(--font-sans, "Market Sans");
+  color: var(--color-foreground-primary);
+  font-size: var(--font-size-giant-2, 36px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--font-size-giant-3, 46px);
+  letter-spacing: -0.72px;
+}
+
+.display-3 {
+  font-family: var(--font-sans, "Market Sans");
+  color: var(--color-foreground-primary);
+  font-size: var(--font-size-giant-1, 30px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+}
+
+.title-1 {
+  font-family: var(--font-sans, "Market Sans");
+  color: var(--color-foreground-primary);
+  font-size: var(--font-size-large-2, 24px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--font-size-large-3, 32px); /* 133.333% */
+}
+
+.title-2 {
+  font-family: var(--font-sans, "Market Sans");
+  color: var(--color-foreground-primary);
+  font-size: var(--font-size-large-1, 20px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--lineHeight-large1, 28px); /* 140% */
+}
+
+.subtitle-1 {
+  font-family: var(--font-sans, "Market Sans");
+  color: var(--color-foreground-secondary);
+  font-size: var(--font-size-large-1, 20px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--lineHeight-large1, 28px); /* 140% */
+}
+
+.subtitle-2 {
+  font-family: var(--font-sans, "Market Sans");
+  color: var(--color-foreground-secondary);
+  font-family: var(--family-primary, "Market Sans");
+  font-size: var(--font-size-medium, 16px);
+  font-weight: 400;
+  line-height: var(--font-size-large-2, 24px);
+}
+
+.caption {
+  color: var(--color-foreground-secondary);
+  font-size: var(--font-size-small, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--font-size-medium, 16px);
+}
+
+.caption-bold {
+  color: var(--color-foreground-secondary);
+  font-size: var(--font-size-small, 14px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--font-size-medium, 16px);
+}
+
+.text-line-limit(@lines) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @lines;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  line-clamp: @lines;
+}
+
+.ginormous-1-mixin() {
+  .ginormous-1;
+}
+
+.display-1-mixin() {
+  .display-1;
+}
+
+.display-2-mixin() {
+  .display-2;
+}
+
+.display-3-mixin() {
+  .display-3;
+}
+
+.title-1-mixin() {
+  .title-1;
+}
+
+.title-2-mixin() {
+  .title-2;
+}
+
+.subtitle-1-mixin() {
+  .subtitle-1;
+}
+
+.subtitle-2-mixin() {
+  .subtitle-2;
+}
+
+.caption-mixin() {
+  .caption;
+}
+
+.caption-bold-mixin() {
+  .caption-bold;
+}
+
+.section-title {
+  .title-1-mixin();
+  font-weight: normal;
+}

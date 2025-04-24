@@ -1,0 +1,24 @@
+@import "~@ebay/skin/dist/variables/variables.less";
+
+@import "~@ebay/skin/marketsans.css";
+@import "~@ebay/skin/tokens.css";
+@import "~@ebay/skin/global.css";
+@import "~@ebay/skin/utility.css";
+@import "~@ebay/skin/page-grid.css";
+@import "~@ebay/skin/typography.css";
+@import "@/styles/_defaults.less";
+@import "@/styles/_tokens.less";
+@import "@/styles/_typography.less";
+
+dialog {
+  margin: auto;
+}
+
+h1 {
+  font-size: var(--font-size-giant-2);
+  text-wrap: balance;
+
+  @media screen and (min-width: @_screen-size-LG) {
+    font-size: var(--font-size-giant-3);
+  }
+}
