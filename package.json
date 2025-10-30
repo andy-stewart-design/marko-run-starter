@@ -4,14 +4,14 @@
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
-    "@ebay/ebayui-core": "^15.8.0",
-    "@ebay/skin": "^19.8.1",
-    "marko": "^5.37.41"
+    "@ebay/ebayui-core": "^15.12.9",
+    "@ebay/skin": "^19.15.0",
+    "marko": "^5.37.61"
   },
   "devDependencies": {
-    "@marko/run": "^0.8.0",
-    "@types/node": "^24.0.13",
-    "less": "^4.3.0"
+    "@marko/run": "^0.9.3",
+    "@types/node": "^24.9.2",
+    "less": "^4.4.2"
   },
   "private": true,
   "scripts": {
